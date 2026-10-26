@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sports Day event scoreboard">
+  <title>Sports Day</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">School Athletics Meet</p>
+        <h1>Sports Day</h1>
+      </div>
+      <button id="startButton" class="primary-button" type="button">Start Events</button>
+    </header>
+
+    <section class="event-stage" aria-labelledby="eventTitle">
+      <div class="status-line">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span id="statusText">Ready for the opening ceremony</span>
+      </div>
+      <h2 id="eventTitle">Awaiting first event</h2>
+      <p id="eventMessage" class="event-message">Start the meet to begin the callback sequence.</p>
+      <div id="eventDetails" class="event-details"></div>
+    </section>
+
+    <section class="content-grid">
+      <div class="scoreboard" aria-labelledby="scoresTitle">
+        <div class="section-heading">
+          <h2 id="scoresTitle">Team Scores</h2>
+          <span id="eventNumber">0 / 3 events</span>
+        </div>
+        <div id="scores" class="scores-list"></div>
+      </div>
+
+      <div class="event-log" aria-labelledby="logTitle">
+        <div class="section-heading">
+          <h2 id="logTitle">Event Log</h2>
+          <button id="clearLogButton" class="text-button" type="button">Clear</button>
+        </div>
+        <div id="consoleLog" class="console-lines" aria-live="polite"></div>
+      </div>
+    </section>
+
+  <script src="script.js"></script>
+  </main>
+</body>
+</html>
